@@ -1,0 +1,27 @@
+.header {
+  background-color: #fff;
+  &__content {
+    padding: 13px 16px;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &__logo {
+    width: 104px;
+    height: 26px;
+  }
+
+  &__authentification {
+    display: flex;
+    gap: 10px;
+  }
+}
