@@ -1,0 +1,38 @@
+@import "../../../../../styles/mixins.scss";
+
+.application {
+  &__content {
+    padding: 0 16px;
+  }
+
+  &__title {
+    @include typography(400, 40px, 40px);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 25px;
+  }
+
+  &__button {
+    align-self: center;
+  }
+}
+
+@include onTablet {
+  .form {
+    &__content {
+      min-width: 380px;
+    }
+  }
+}
