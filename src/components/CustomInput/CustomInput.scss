@@ -1,0 +1,34 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.custom-input {
+  &__field {
+    width: 100%;
+    padding: 17px 16px;
+    border: 1px solid #d0cfcf;
+
+    &::placeholder {
+      color: #7e7e7e;
+    }
+  }
+
+  &__label {
+    margin-top: 4px;
+    display: block;
+    color: #7e7e7e;
+    padding-left: 16px;
+    @include typography(400, 14px, 14px);
+  }
+}
+
+.input-error {
+  margin-top: 4px;
+  border-color: $error-color;
+}
+
+.label-error {
+  margin-top: 4px;
+  color: #cb3d40;
+  padding-left: 16px;
+  @include typography(400, 14px, 14px);
+}
