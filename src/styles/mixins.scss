@@ -1,0 +1,17 @@
+@mixin typography($weight: 400, $size: "16px", $lineHeight: normal) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
