@@ -1,0 +1,59 @@
+@import "../../../../../styles/mixins.scss";
+
+.banner {
+  background: url("../../../../../assets/images/banner.png") center / cover
+    no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 140px;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 16px 71px;
+  }
+
+  &__title {
+    @include typography(400, 40px, 40px);
+    text-align: center;
+    margin-bottom: 21px;
+  }
+
+  &__headlineContent {
+    text-align: center;
+    margin-bottom: 31px;
+  }
+
+  &__button {
+    align-self: center;
+  }
+}
+
+@include onTablet {
+  .banner {
+    &__content {
+      padding: 89px 194px;
+    }
+
+    &__title {
+      text-align: initial;
+      max-width: 380px;
+    }
+
+    &__headlineContent {
+      max-width: 380px;
+    }
+  }
+}
+
+@include onDesktop {
+  .banner {
+    &__content {
+      padding: 164px 322px;
+    }
+  }
+}
