@@ -9,7 +9,14 @@ export const UserCard: React.FC<UserCardprops> = ({ user }) => {
   return (
     <article className="user-card">
       <div className="user-card__content">
-        <img src={user.photo} alt="userPhoto" className="user-card__photo" />
+        <img
+          src={user.photo}
+          alt="userPhoto"
+          className="user-card__photo"
+          loading="lazy"
+          width={70}
+          height={70}
+        />
         <p className="user-card__name text-hidden">{user.name}</p>
         <section className="user-card__credentials">
           <article className="user-card__position text-hidden">
