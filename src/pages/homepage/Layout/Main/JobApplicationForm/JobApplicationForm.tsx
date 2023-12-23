@@ -1,19 +1,30 @@
+import React from "react";
 import { Button } from "../../../../../components/Button/Button";
 import { CustomInput } from "../../../../../components/CustomInput/CustomInput";
 import { CustomRadio } from "../../../../../components/CustomRadio/CustomRadio";
-import { SuccessfullyRegistered } from "../../../../../components/SuccessfullyRegistered/SuccessfullyRegistered";
 import { UploadButton } from "../../../../../components/UploadButton/UploadButton";
 import { useGetPositions } from "../../../../../hooks/useGetPositions";
 import { useJobApplicationForm } from "../../../../../hooks/useJobApplicationForm";
 
 import "./JobApplicationForm.scss";
 
+const SuccessfullyRegisteredLazy = React.lazy(
+  () =>
+    import(
+      "../../../../../components/SuccessfullyRegistered/SuccessfullyRegistered"
+    )
+);
+
 export const JobApplicationForm = () => {
   const { formik, successfulRegistration } = useJobApplicationForm();
   const { positions } = useGetPositions();
 
   if (successfulRegistration) {
-    return <SuccessfullyRegistered />;
+    return (
+      <React.Suspense fallback={<div>Loading...</div>}>
+        <SuccessfullyRegisteredLazy />
+      </React.Suspense>
+    );
   }
 
   return (

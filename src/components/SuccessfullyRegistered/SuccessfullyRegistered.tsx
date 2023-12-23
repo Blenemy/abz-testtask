@@ -2,7 +2,7 @@ import successImage from "../../assets/images/success-image.svg";
 
 import "./SuccessfullyRegistered.scss";
 
-export const SuccessfullyRegistered = () => {
+const SuccessfullyRegistered = () => {
   return (
     <section className="success-component">
       <h2 className="success-component__title">User successfully registered</h2>
@@ -14,3 +14,5 @@ export const SuccessfullyRegistered = () => {
     </section>
   );
 };
+
+export default SuccessfullyRegistered;
