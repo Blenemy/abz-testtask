@@ -1,0 +1,47 @@
+@import "../../styles/variables.scss";
+
+.upload-container {
+  max-width: 380px;
+  margin-bottom: 50px;
+
+  &__fields {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    border: 1px solid #000;
+    padding: 14px 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__text {
+    display: block;
+    border: 1px solid #d0cfcf;
+    color: #d0cfcf;
+    border-left: none;
+    padding: 14px 15px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__error {
+    padding-left: 14px;
+    color: $error-color;
+  }
+}
+
+.upload-error {
+  border-color: $error-color;
+}
+
+.upload-text-filled {
+  color: #7e7e7e;
+}
