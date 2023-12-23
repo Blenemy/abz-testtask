@@ -1,0 +1,6 @@
+@import "../../../../styles/mixins.scss";
+
+.main {
+  @include typography(400, 16px, 26px);
+  padding-bottom: 100px;
+}
