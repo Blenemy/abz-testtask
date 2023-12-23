@@ -1,0 +1,26 @@
+@import "../../styles/mixins.scss";
+
+.success-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__title {
+    @include typography(400, 40px, 40px);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__img {
+    transform: scale(0.8);
+  }
+}
+
+@include onTablet {
+  .success-component {
+    &__img {
+      transform: scale(1);
+    }
+  }
+}
