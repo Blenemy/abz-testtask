@@ -5,14 +5,6 @@ import { useAppDispatch } from "../app/hooks";
 import { useState } from "react";
 import { jobValidationSchema } from "../utils/jobValidationSchema";
 
-export type DataToSend = {
-  email: string;
-  name: string;
-  phone: string;
-  photo: File;
-  position: number;
-};
-
 export const useJobApplicationForm = () => {
   const [successfulRegistration, setSuccessfulRegistration] = useState(false);
   const dispatch = useAppDispatch();
