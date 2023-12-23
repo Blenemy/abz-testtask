@@ -1,0 +1,48 @@
+@import "../../styles/mixins.scss";
+
+.user-card {
+  border-radius: 10px;
+  background-color: #fff;
+
+  &__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  &__credentials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.text-hidden {
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+  max-width: 288px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@include onTablet {
+  .user-card {
+    flex: 1 1 344px;
+  }
+}
+
+@include onDesktop {
+  .user-card {
+    flex: 1 1 282px;
+  }
+}
